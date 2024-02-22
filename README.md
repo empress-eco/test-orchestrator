@@ -1,34 +1,60 @@
-## Simple Test Orchestrator
-Made for parallel execution of unit tests in [Frappe](https://github.com/frappe/frappe) & [ERPNext](https://gihub.com/frappe/erpnext)
+<div align="center">
+<img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Test Orchestrator Logo">
 
-> This is a very basic version of what cypress.io does for it's parallelization
+<h1 align="center">Optimize your unit testing with Test Orchestrator</h1>
+<p align="center">
+Leverage the power of parallel execution for your unit tests and boost your productivity.
+<br />
+<a href="https://empress.eco/">Explore</a>
+·
+<a href="https://github.com/test-orchestrator/test-orchestrator/issues">Report Bug</a>
+·
+<a href="https://github.com/test-orchestrator/test-orchestrator/issues/new">Request Feature</a>
+</p>
+</div>
 
+## About The Project
 
-### Endpoints
+### 📖 Overview
+Test Orchestrator is a versatile tool that simplifies and accelerates your unit testing process by enabling parallel execution of tests. It is the perfect solution for developers aiming to increase their productivity and optimize their testing procedures.
 
-**Note:** Each endpoint requires `CI_BUILD_ID` (unique ID of the build in CI) and `CI_INSTANCE_ID` (unique ID of instance in which parallel tests are running) headers.  
+### 🌟 Key Features
+- Parallel execution of unit tests
+- Ability to register a test instance
+- Fetching the next available test to run
 
-#### Register a test instance
+## Getting Started
 
-Before initializing tests, a test instance needs to register itself to the orchestrator with the list of all tests to execute.
-* **URL**
+### Prerequisites
+To utilize Test Orchestrator effectively, you need to have unique IDs for both the build in CI and the instance running parallel tests. 
 
-  ```url
-  GET /register-instance
-  ```
-* **URL Params**
+### Installation
+Clone the repository and follow these steps to get Test Orchestrator up and running:
 
-  Required:
-  ```
-  test_spec_list=[ARRAY]
-  ```
- **Note:** Separate test list is maintained for each build id.
+```sh
+git clone https://github.com/empress-eco/test-orchestrator.git
+cd test-orchestrator
+# Further installation instructions coming soon
+```
 
-#### Get next test to run
-Once the instance is registered, a test instance can ask for next test based on availability. Orchestrator will return one test to execute from the registered test list.
+## Usage
+After registering a test instance with the list of all tests to execute, the test instance can request the next available test to run. Test Orchestrator will then assign you a test from the registered test list.
 
-* **URL**
+## Contributing
+Community contributions are highly welcomed and valued. Here's how you can contribute:
 
-  ```url
-  GET /get-next-test-spec
-  ```
+- Fork the Project
+- Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+- Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+- Push to the Branch (`git push origin feature/AmazingFeature`)
+- Open a Pull Request
+
+## License and Acknowledgements
+
+### License
+This project is licensed under the MIT License. Your contributions will also be licensed under the MIT License.
+
+### Acknowledgements
+We extend our heartfelt gratitude to the Empress Community, the brains behind the essential tools that power this project. Their innovation and relentless dedication form the bedrock of the functionalities we rely on. We are immensely appreciative of their pioneering work and ongoing support.
+
+For more information on the project, please visit our [Github Repository](https://github.com/empress-eco/test-orchestrator.git) or review our [Documentation](https://grow.empress.eco/). If you encounter any issues or want to request a feature, please [Report a Bug](https://github.com/empress-eco/test-orchestrator/issues) or [Request a Feature](https://github.com/empress-eco/test-orchestrator/issues).
